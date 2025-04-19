@@ -94,7 +94,7 @@ git clone https://github.com/RichardFelic/mern-setup.git
 npm install
 ```
 
-3. 🛡 Crea el archivo `.env` en **ambas carpetas** con las variables de entorno necesarias.
+3. 🛡 Crea el archivo `.env` en **ambas carpetas** con las variables de entorno necesarias. (Hay ejemplos en cada una llamados `.env.example`)
 
 4. 🚀 Ejecuta los servidores en cada carpeta:
 
