@@ -127,4 +127,3 @@ Puedes encontrar más información en el archivo Puedes encontrar más informaci
 ---
 
 ¡Gracias por visitar este repositorio! 🙌
-```
