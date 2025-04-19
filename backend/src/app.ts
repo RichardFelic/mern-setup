@@ -4,7 +4,7 @@ import morgan from 'morgan';
 import {logger, stream} from './logger';
 import dotenv from 'dotenv';
 import handleCors from 'cors';
-
+import { errorHandler } from './middlewares/errorHandler.middleware';
 // Cargar variables de entorno
 dotenv.config();
 
@@ -35,8 +35,22 @@ if (env === 'production') {
     logger.info('🚀 Modo produccion - morgan combined activado');
 }
 
-app.get('/', (req, res) => {
-    res.json({ message: 'Hello World!' }); // Responder con un JSON
+app.get('/', (req, res, next) => {
+    try {
+        res.json({ status: 200,  message: 'Ejemplo de mensaje exitoso' });
+    } catch (err) {
+        next(err);
+    }
 });
+
+app.get('/example', (req, res, next) => {
+    try {
+      throw { status: 400, message: 'Esto es un error de ejemplo' };
+    } catch (error) {
+      next(error);
+    }
+  });
+
+app.use(errorHandler); // Middleware para manejar errores
 
 export default app;
