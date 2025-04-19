@@ -1,4 +1,4 @@
-```
+
 # 🚀 MERN Setup – Fullstack Boilerplate
 
 Este es un setup de fullstack utilizando la pila **MERN** (MongoDB, Express, React y Node.js). Este proyecto proporciona una base sólida para construir aplicaciones web escalables y seguras.
